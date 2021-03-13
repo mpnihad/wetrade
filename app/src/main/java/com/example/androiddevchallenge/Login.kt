@@ -54,6 +54,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.ui.theme.MyTheme
@@ -86,10 +87,12 @@ fun MyAppLogin(onLoginClicked: () -> Unit) {
                     contentDescription = "main_background",
                     modifier = Modifier.fillMaxWidth(),
                 )
-                Text(
-                    text = "Welcome back",
-                    style = MaterialTheme.typography.h2.copy(color = MaterialTheme.colors.onBackground),
 
+                Text(
+                    text = "Welcome\nback",
+
+                    style = MaterialTheme.typography.h2.copy(color = MaterialTheme.colors.onBackground),
+                    textAlign = TextAlign.Center,
                     modifier = Modifier
                         .fillMaxWidth()
                         .wrapContentWidth(align = Alignment.CenterHorizontally)
